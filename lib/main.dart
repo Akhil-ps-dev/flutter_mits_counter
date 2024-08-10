@@ -41,12 +41,18 @@ class _HomePageState extends State<HomePage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text("mybuttons"),
+            SizedBox(
+              height: 30,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 FloatingActionButton(
                   onPressed: () {},
                   child: Icon(Icons.arrow_upward_rounded),
+                ),
+                SizedBox(
+                  width: 10,
                 ),
                 FloatingActionButton(
                   onPressed: () {},
