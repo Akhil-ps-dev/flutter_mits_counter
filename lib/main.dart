@@ -32,11 +32,22 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Counter"),
+        title: const Text("Counter"),
         backgroundColor: Colors.yellow,
       ),
       body: Center(
-        child: Text("yee"),
+        child: Row(
+          children: [
+            FloatingActionButton(
+              onPressed: () {},
+              child: Icon(Icons.arrow_upward_rounded),
+            ),
+            FloatingActionButton(
+              onPressed: () {},
+              child: Icon(Icons.arrow_upward_rounded),
+            ),
+          ],
+        ),
       ),
     );
   }
