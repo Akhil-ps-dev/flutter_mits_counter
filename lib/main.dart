@@ -28,6 +28,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  int count = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,7 +42,10 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text("mybuttons"),
+            Text(
+              count.toString(),
+              style: TextStyle(fontSize: 60),
+            ),
             SizedBox(
               height: 30,
             ),
@@ -48,15 +53,23 @@ class _HomePageState extends State<HomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 FloatingActionButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(() {
+                      count++;
+                    });
+                  },
                   child: Icon(Icons.arrow_upward_rounded),
                 ),
                 SizedBox(
                   width: 10,
                 ),
                 FloatingActionButton(
-                  onPressed: () {},
-                  child: Icon(Icons.arrow_upward_rounded),
+                  onPressed: () {
+                    setState(() {
+                      count--;
+                    });
+                  },
+                  child: Icon(Icons.arrow_downward_rounded),
                 ),
               ],
             ),
