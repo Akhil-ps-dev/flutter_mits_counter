@@ -36,15 +36,23 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.yellow,
       ),
       body: Center(
-        child: Row(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            FloatingActionButton(
-              onPressed: () {},
-              child: Icon(Icons.arrow_upward_rounded),
-            ),
-            FloatingActionButton(
-              onPressed: () {},
-              child: Icon(Icons.arrow_upward_rounded),
+            Text("mybuttons"),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                FloatingActionButton(
+                  onPressed: () {},
+                  child: Icon(Icons.arrow_upward_rounded),
+                ),
+                FloatingActionButton(
+                  onPressed: () {},
+                  child: Icon(Icons.arrow_upward_rounded),
+                ),
+              ],
             ),
           ],
         ),
